@@ -29,6 +29,7 @@ h2 {
 .avatars {
   --avatar-count: 10;
   --avatar-size: 75px;
+  --border-size: 5px;
 
   --column-size: calc(var(--avatar-size) / 2);
 
@@ -46,7 +47,7 @@ h2 {
 .avatar {
   width: var(--avatar-size);
   border-radius: 100vw;
-  border: 5px solid white;
+  border: var(--border-size) solid white;
   box-shadow: 0.25rem 0.25rem 0.5rem hsl(0 0% 0% / 0.2);
 
   transition: scale 500ms;
@@ -64,3 +65,45 @@ h2 {
   }
 }
 
+@media (max-width: 768px) {  
+  .avatar:nth-child(n + 7) {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .avatars {
+    --avatar-size: 40px;
+    --border-size: 2px;
+  }
+  
+  .avatar:nth-child(n + 7) {
+    display: none;
+  }
+  
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .avatars {
+    --avatar-size: 35px;
+    --border-size: 2px;
+  }
+  
+  .avatar:nth-child(n + 6) {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .avatars {
+    --avatar-size: 35px;
+    --border-size: 2px;
+  }
+  
+  .avatar:nth-child(n + 6) {
+    display: none;
+  }
+}

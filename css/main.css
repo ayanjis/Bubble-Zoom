@@ -73,22 +73,22 @@ h2 {
 
 @media (max-width: 425px) {
   .avatars {
-    --avatar-size: 40px;
+    --avatar-size: 45px;
     --border-size: 2px;
   }
   
-  .avatar:nth-child(n + 7) {
+  .avatar:nth-child(n + 6) {
     display: none;
   }
   
   h2 {
     font-size: 1rem;
   }
-}
+}   
 
 @media (max-width: 375px) {
   .avatars {
-    --avatar-size: 35px;
+    --avatar-size: 40px;
     --border-size: 2px;
   }
   
@@ -97,13 +97,8 @@ h2 {
   }
 }
 
-@media (max-width: 320px) {
-  .avatars {
-    --avatar-size: 35px;
-    --border-size: 2px;
-  }
-  
-  .avatar:nth-child(n + 6) {
+@media (max-width: 320px) {  
+  .avatar:nth-child(n + 5) {
     display: none;
   }
 }
